@@ -19,6 +19,8 @@ iframe {
   z-index: -1;
 }
 
-.stopfade { 
-   opacity: .5;
+.logo { 
+  opacity: .75;
+  transform: translateX(0) translateY(25);
+  transition: 25s transform;
 }
