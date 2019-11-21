@@ -3,15 +3,24 @@ html,body {
 }
 
 $gradient-angel: 60deg;
-.christmas {
+
+.logo {
 	top: calc(50% - #{$size}/2);
 	left: calc(50% - #{$size}/2);
 	width: $size;
 	height: $size;
 	position: fixed;
+  z-index: 1;  
+}
+
+.christmas {
+  bottom: 0;
+	right: 0;
+	width: $size;
+	height: $size;
+	position: fixed;
   // overflow: hidden;
 	// border-radius: 50%;
-	background-color: $bg;
 	background-image:
 		// top
 		linear-gradient($gradient-angel, darken($leaf-color,0%) 8%, transparent 8.5%),
@@ -68,4 +77,13 @@ $gradient-angel: 60deg;
 			}
 		}
 	}
+}
+
+.christmas-1 {
+  @extend .christmas;
+  bottom: 0;
+	left: 0;
+	width: $size;
+	height: $size;
+	position: fixed;
 }
