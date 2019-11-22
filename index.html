@@ -12,6 +12,8 @@
   
   function onPlayerReady(event) {
     player.mute();
+    var vid = document.getElementById("ytplayer");
+    vid.muted = true;
   }
 
  function onStateChange(event) {
