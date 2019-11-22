@@ -24,3 +24,7 @@ h1, h2 {
   transform: translateX(0) translateY(25);
   transition: 25s transform;
 }
+
+#error-screen-msg {
+  display: none !important;
+}
