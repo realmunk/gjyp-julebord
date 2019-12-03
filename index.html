@@ -14,6 +14,9 @@
     player.mute();
     var vid = document.getElementById("ytplayer");
     vid.muted = true;
+    setTimeout(function () {
+      player.unMute();
+    }, 1000);
   }
 
  function onStateChange(event) {
@@ -23,10 +26,11 @@
       player.playVideo();
     }
   }
+
   
   function onYouTubePlayerAPIReady() {
     player = new YT.Player('ytplayer', {
-      videoId: 'ZY3J3Y_OU0w',
+      videoId: '8gbq263jOB0',
       events: {
         'onReady': onPlayerReady,
         'onStateChange': onStateChange
@@ -37,7 +41,7 @@
         showinfo: 0,        // Hide the video title
         modestbranding: 1,  // Hide the Youtube Logo
         loop: 1,            // Run the video in a loop
-        mute: 1,
+        mute: 0,
         fs: 0,              // Hide the full screen button
         cc_load_policy: 0, // Hide closed captions
         iv_load_policy: 3,  // Hide the Video Annotations
